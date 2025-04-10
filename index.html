@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Başlık ve Meta Etiketleri Tekrar Benzersizleştirildi -->
+    <title>Abdulkadir Güngör - Web Design & Developer | Dijital Dokuma Sanatı</title>
+    <meta name="description" content="Abdulkadir Güngör rehberliğinde Web Tasarımı ve Geliştirme üzerine özgün bir düşünsel yolculuk. Kodun estetik örüntüleri, dijital deneyimlerin inşası ve sanal alemde kalıcı değerler yaratma üzerine bir manifesto.">
+    <meta name="keywords" content="Abdulkadir Güngör, Web Design, Web Developer, Dijital Zanaatkarlık, Web Mimarisi, Frontend Sanatı, Backend Stratejileri, Fullstack Yaklaşımı, JavaScript Dinamikleri, HTML Yapıtaşları, CSS Görsel Dili, Teknoloji ve Yaratıcılık, Anlamlı Arayüzler, Duyarlı Tasarım İlkeleri, Mobil Merkezli Dünya, CV Portfolyo, Özgeçmiş Detayları, Github Kod Deposu, Linkedin Profesyonel Ağ, Kodun Felsefesi, Etik Web Geliştirme, Kullanıcı Deneyimi Tasarımı, Siber Güvenlik Yaklaşımları">
+    <meta name="author" content="Abdulkadir Güngör">
+
+    <style>
+        /* Genel Resetleme ve Temel Ayarlar */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px; /* Responsive font boyutu için temel */
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f9f9f9;
+            overflow-x: hidden; /* Yatay kaydırmayı engelle */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Konteyner */
+        .container {
+            width: 90%;
+            max-width: 1100px; /* İçeriğin okunabilir genişliği */
+            margin: 0 auto;
+            padding: 2rem 1rem; /* Üst/alt ve yan boşluklar */
+        }
+
+        /* Ana İçerik Alanı */
+        main {
+            flex-grow: 1; /* Footer'ı sayfanın altına itmek için */
+        }
+
+        /* Başlıklar */
+        h1, h2, h3, h4 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem); /* Responsive başlık boyutu */
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 0.5rem;
+            color: #0056b3;
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            margin-top: 2.5rem;
+            color: #2c3e50;
+            border-left: 4px solid #007bff;
+            padding-left: 0.8rem;
+        }
+
+        h3 {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-top: 2rem;
+            color: #34495e;
+        }
+
+        /* Paragraflar */
+        p {
+            margin-bottom: 1.2rem;
+            font-size: clamp(1rem, 2.5vw, 1.1rem); /* Responsive metin boyutu */
+            text-align: justify;
+        }
+
+        /* Bağlantılar */
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        a:hover, a:focus {
+            color: #0056b3;
+            text-decoration: underline;
+            outline: 2px solid transparent; /* Odaklanma stilini belirginleştir */
+            outline-offset: 2px;
+        }
+
+        /* Kod Blokları (Örnek) */
+        pre {
+            background-color: #2d2d2d;
+            color: #f0f0f0;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto; /* Uzun kod satırları için kaydırma */
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            margin: 1.5rem 0;
+            white-space: pre-wrap; /* Satırları sar */
+            word-wrap: break-word; /* Kelimeleri böl */
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #e9ecef;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+            font-size: inherit; /* Pre içindeki code için boyut ayarı */
+        }
+
+        /* Listeler */
+        ul, ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Alıntılar */
+        blockquote {
+            border-left: 5px solid #007bff;
+            margin: 1.5rem 0;
+            padding: 1rem 1.5rem;
+            background-color: #e9ecef;
+            font-style: italic;
+            color: #555;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+        }
+
+        /* Resimler (Eğer eklenirse) */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1.5rem auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ayırıcı Çizgi */
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+            margin: 3rem 0;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem; /* Bağlantılar arası boşluk */
+        }
+
+        .footer-links li {
+            margin-bottom: 0; /* Liste elemanlarının alt boşluğunu kaldır */
+        }
+
+        .footer-links a {
+            color: #ecf0f1;
+            font-weight: bold;
+        }
+
+        .footer-links a:hover, .footer-links a:focus {
+            color: #bdc3c7;
+            text-decoration: underline;
+        }
+
+        .copyright {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #bdc3c7;
+            margin-top: 1rem;
+        }
+
+        /* Responsive Tasarım Ayarlamaları */
+
+        /* Tabletler ve Küçük Masaüstleri (768px ve üzeri) */
+        @media (min-width: 768px) {
+            .container {
+                width: 85%;
+                padding: 2.5rem 1.5rem;
+            }
+            p {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Büyük Masaüstleri (1024px ve üzeri) */
+        @media (min-width: 1024px) {
+            .container {
+                width: 80%;
+                /* max-width: 1100px; */ /* Zaten yukarıda tanımlı */
+            }
+            /* Belki font boyutunu biraz daha ayarlayabiliriz */
+        }
+
+        /* Erişilebilirlik İyileştirmeleri */
+        *:focus {
+            outline: 3px dashed #0056b3;
+            outline-offset: 2px;
+        }
+        /* Odaklanma stillerini sadece klavye ile gezinildiğinde göstermek için (opsiyonel) */
+        body:not(.user-is-tabbing) *:focus {
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <!-- Başlık Aynı Kalıyor -->
+            <h1>Abdulkadir Güngör - Web Design & Developer</h1>
+        </header>
+
+        <main>
+            <!-- İçerik Üçüncü Kez, Tamamen Farklı Kelimelerle Yeniden Yazıldı -->
+            <section id="giris-ucuncu">
+                <h2>Bir Fikirden Etkileşime: Dijital Özün Şekillendirilmesi</h2>
+                <p>
+                    Her dijital yaratım, başlangıçta soyut bir kavram, çözülmeyi bekleyen bir problem ya da ifade edilmeyi arzulayan bir vizyondur. Bu potansiyel enerjiyi, kullanıcıların etkileşime geçebileceği, deneyimleyebileceği ve değer bulabileceği somut bir forma dönüştürmek, web tasarımı ve geliştirmenin özünü oluşturur. Ben, <strong>Abdulkadir Güngör</strong>, bu dönüştürme sürecini bir zanaat olarak görüyor; mantık ve estetiği, işlevsellik ve kullanıcı keyfini bir araya getiren dijital eserler ortaya koyma gayretindeyim. Bu metin, bir <strong>Web Design & Developer</strong> olarak benim perspektifimden, kodun görünmeyen dünyasına, arayüzlerin insan psikolojisiyle ilişkisine ve dijital alanda anlamlı yapılar inşa etmenin felsefi derinliklerine bir bakış sunmaktadır. Web, sadece bir teknoloji yığını değil, aynı zamanda insanlığın kolektif ifadesinin ve etkileşiminin sürekli yeniden dokunduğu bir goblendir.
+                </p>
+                <p>
+                    Geliştiricinin rolü, bu süreçte bir arabulucuya benzer: insan ihtiyaçlarını ve hedeflerini anlar, bunları teknolojinin diline çevirir ve sonuçta hem insan hem de makine tarafından "anlaşılan" bir köprü kurar. Bu, teknik yeterliliğin ötesinde, derin bir empati, öngörü yeteneği ve yaratıcı problem çözme becerisi gerektirir. Kendi dijital kimliğimin ve bu zanaata yaklaşımımın bir yansıması olan <a href="https://abdulkadirgungor.com" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör</a> ana web sitem ve proje odaklı <a href="https://abdulkadirgungor86.github.io/" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör - Kişisel Web Site</a> platformum, bu felsefenin somut örneklerini barındırır.
+                </p>
+            </section>
+
+            <hr>
+
+            <section id="kodun-yapisi">
+                <h2>Mantığın Dokusu: Kodun Yapısal Niyeti ve Zarafeti</h2>
+                <p>
+                    Kod yazma eylemi, bir düşünceyi yapılandırma ve onu kesin, mantıksal adımlara dökme pratiğidir. Ancak bu, sadece soğuk bir mekanik işlem değildir. İyi yapılandırılmış kod, kendi içinde bir estetik taşır; okunabilirliği, sürdürülebilirliği ve genişletilebilirliği ile öne çıkar. Tıpkı bir mimarın çizdiği planın, binanın hem sağlamlığını hem de estetik bütünlüğünü belirlemesi gibi, kodun iç yapısı da son ürünün kalitesini ve dayanıklılığını temelden etkiler. Bu, kodun sadece ne yaptığıyla değil, nasıl tasarlandığıyla da ilgilidir.
+                </p>
+                <p>
+                    Bu yapısal niyet, kodun her seviyesinde kendini gösterir: anlamlı değişken isimlerinden, tek bir sorumluluğa odaklanmış fonksiyonlara, iyi tanımlanmış modüllere kadar. "Temiz kod" prensipleri, sadece teknik bir tercih değil, aynı zamanda düşünsel bir disiplin ve geleceğe yönelik bir yatırımdır. Anlaşılır ve bakımı kolay kod yazmak, projenin ömrünü uzatır ve işbirliğini kolaylaştırır. Kodun bu içsel zarafeti, dışarıya daha hızlı, daha güvenilir ve daha keyifli bir kullanıcı deneyimi olarak yansır. Geliştirme pratiklerimi ve kod örneklerimi incelemek için <a href="https://github.com/abdulkadirgungor86" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör Github Yazılım</a> depoma göz atabilirsiniz. Kodun sağlamlığına ve güvenliğine verdiğim önemi ise <a href="https://github.com/abdulkadir-gungor" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör Github CyberSecurity</a> profilimde görebilirsiniz.
+                </p>
+                <blockquote>
+                    "Mükemmellik, eklenecek bir şey kalmadığında değil, çıkarılacak bir şey kalmadığında elde edilir." – Antoine de Saint-Exupéry (Bu ilke, kodda sadelik ve zarafetin önemini vurgular.)
+                </blockquote>
+                <p>
+                    Yazdığımız kod, sadece makinelerle değil, aynı zamanda – ve belki daha da önemlisi – diğer insanlarla iletişim kurar. Gelecekteki kendimiz, takım arkadaşlarımız veya açık kaynak topluluğu, kodun mantığını ve niyetini anlayabilmelidir. Bu nedenle, kodun açıklığı ve yapısal bütünlüğü, teknik bir gereklilik olmanın ötesinde, profesyonel bir nezaket ve entelektüel bir cömertliktir.
+                </p>
+            </section>
+
+            <hr>
+
+            <section id="deneyim-tasarimi">
+                <h2>Deneyim Koreografisi: İnsan Odaklı Dijital Etkileşimler Yaratmak</h2>
+                <p>
+                    Web siteleri ve uygulamalar, kullanıcıların dijital dünyayla etkileşim kurduğu sahnelerdir. Bu sahnelerin tasarımı, sadece görsel estetikten ibaret değildir; kullanıcının yolculuğunu yönlendiren, görevlerini kolaylaştıran ve onlara tatmin edici bir deneyim sunan bir koreografidir. <strong>Abdulkadir Güngör</strong> olarak benim amacım, bu dijital koreografiyi insanı merkeze alarak tasarlamak; teknolojiyi sezgisel, akıcı ve keyifli hale getirmektir.
+                </p>
+                <p>
+                    Kullanıcı Deneyimi (UX), bu koreografinin temelini oluşturan empati ve anlayış katmanıdır. Kullanıcının kim olduğunu, neye ihtiyacı olduğunu, hangi zorluklarla karşılaşabileceğini ve motivasyonlarının ne olduğunu anlamayı içerir. Kullanıcı Arayüzü (UI) ise bu anlayışı somutlaştıran görsel ve etkileşimsel dildir. Renkler, tipografi, ikonlar, animasyonlar ve geri bildirimler, kullanıcının sistemle olan diyaloğunu kolaylaştırır ve deneyime estetik bir boyut katar. Başarılı bir UX/UI tasarımı, kullanıcının kendini anlaşılmış hissetmesini sağlar ve hedeflerine zahmetsizce ulaşmasına yardımcı olur. Bu alandaki yeteneklerim ve gerçekleştirdiğim projeler hakkında daha fazla bilgi için <a href="https://abdulkadirgungor86.github.io/cv" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör - Özgeçmiş CV</a> sayfasını ziyaret edebilirsiniz.
+                </p>
+                <p>
+                    Bu deneyim koreografisinin her sahnede (farklı cihazlarda) tutarlı ve etkili olması gerekir. Responsive (duyarlı) tasarım, bu gerekliliğe verilen yanıttır. İçeriğin ve işlevselliğin, kullanıcının erişim sağladığı ekranın boyutuna ve özelliklerine dinamik olarak uyum sağlaması, modern web'in temel bir ilkesidir. Bu, katı yapılar yerine esnek, akışkan ve uyarlanabilir sistemler düşünmeyi gerektirir. Tıpkı iyi bir dansçının farklı zeminlere uyum sağlaması gibi, iyi bir web deneyimi de farklı cihazlarda zarafetini ve işlevselliğini korumalıdır. Bu, teknik bir ustalık gerektirdiği kadar, kullanıcıya her koşulda en iyi deneyimi sunma taahhüdünü de ifade eder.
+                </p>
+            </section>
+
+            <hr>
+
+            <section id="yaratici-birliktelik">
+                <h2>Yaratıcı Sentez: İnsan Sezgisi ve Makine Mantığının Buluşması</h2>
+                <p>
+                    Web geliştirme, analitik düşünme ile yaratıcı ifadenin benzersiz bir birleşimidir. Bir yanda algoritmaların, veri yapılarının ve protokollerin kesin dünyası, diğer yanda ise estetik kaygıların, kullanıcı empatisinin ve yenilikçi çözümlerin sezgisel alanı bulunur. Bir <strong>Web Design & Developer</strong>, bu iki dünya arasında köprü kuran, mantıksal doğruluğu estetik duyarlılıkla, teknik yeterliliği ise kullanıcı odaklılıkla sentezleyen bir figürdür. Yaratıcılık, sadece görsel tasarımda değil, aynı zamanda kodun mimarisinde, problem çözme yaklaşımlarında ve verimlilik arayışında da kendini gösterir.
+                </p>
+                <p>
+                    Teknolojiler, bu yaratıcı süreçte hem olanak sağlar hem de belirli bir çerçeve sunar. Programlama dilleri, kütüphaneler ve araçlar, bizim ifade biçimlerimizi şekillendirir. Bu araçları sadece kullanmak değil, onların altında yatan prensipleri, felsefelerini ve potansiyellerini anlamak, gerçek ustalığın anahtarıdır. Bir aracı derinden anlamak, onunla sadece bilinen yolları takip etmek yerine, yeni ve beklenmedik çözümler üretme özgürlüğü verir. Bu, teknolojiyle pasif bir ilişki kurmak yerine, onunla aktif bir diyalog içinde olmayı gerektirir.
+                </p>
+                <p>
+                    Bu süreç, insan sezgisi ile makine mantığının verimli bir birlikteliğidir. İnsan olarak bizler, bağlamı anlama, empati kurma ve soyut düşünme yeteneklerine sahibiz. Makineler ise karmaşık hesaplamaları hızla yapma ve tutarlı bir şekilde talimatları uygulama gücüne sahiptir. Başarılı dijital ürünler, bu iki gücün en iyi yönlerini bir araya getirir; teknolojiyi, insani değerleri ve ihtiyaçları desteklemek için kullanır. Bu dinamik alan hakkındaki güncel fikirleri ve profesyonel tartışmaları takip ettiğim <a href="https://www.linkedin.com/in/abdulkadir-güngör" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör Linkedin</a> profilim, bu sentezin farklı boyutlarını keşfetmek için önemli bir platformdur.
+                </p>
+                 <p>
+                    Teknolojinin sürekli evrimi (yapay zeka, yeni web standartları vb.), bu sentezin doğasını da değiştiriyor. Gelecekte geliştiricinin rolü, belki daha çok sistemleri orkestra etmek, akıllı araçları yönlendirmek ve yaratıcı vizyonu teknolojik olanaklarla birleştirmek üzerine odaklanacak. Ancak temel yetkinlikler – analitik düşünme, yaratıcı problem çözme, öğrenme çevikliği ve işbirliği – her zaman merkezi önemini koruyacaktır.
+                </p>
+            </section>
+
+            <hr>
+
+             <section id="etik-sorumluluk-yeni">
+                <h2>Öngörülü İnşa: Dijital Dünyanın Etik Temelleri ve Sorumluluk</h2>
+                <p>
+                    Dijital dünyayı inşa ederken, sadece kod blokları ve piksellerle değil, aynı zamanda insanların hayatları, mahremiyetleri ve fırsat eşitlikleri ile de çalışırız. Yarattığımız platformlar ve araçlar, toplumsal etkileşimleri, bilgiye erişimi ve bireysel davranışları şekillendirme gücüne sahiptir. Bu nedenle, bir <strong>Web Design & Developer</strong> olarak etik düşünceyi işimizin merkezine koymak, sadece bir seçenek değil, ahlaki bir zorunluluktur. Bu, projenin başlangıcından itibaren öngörülü olmayı ve potansiyel sonuçları dikkatle değerlendirmeyi gerektirir.
+                </p>
+                <p>
+                    Veri mahremiyeti ve güvenliği, bu öngörülü yaklaşımın temel taşlarındandır. Kullanıcılardan hangi verilerin neden toplandığını açıkça belirtmek, bu verileri sorumlu bir şekilde yönetmek ve yetkisiz erişime karşı korumak, temel bir güvendir. Güvenlik açıklarını sadece teknik bir sorun olarak değil, kullanıcıları riske atan potansiyel bir zarar olarak görmek gerekir. Güvenli kodlama pratikleri ve sistem tasarımı konusundaki hassasiyetim (<a href="https://github.com/abdulkadir-gungor" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör Github CyberSecurity</a>), bu sorumluluğun teknik boyutuna verdiğim önemi yansıtır. Güvenlik, sonradan yamalanacak bir eksiklik değil, tasarımın ayrılmaz bir parçası olmalıdır.
+                </p>
+                <p>
+                    Dijital kapsayıcılık ve erişilebilirlik (a11y), etik inşanın bir diğer kritik boyutudur. Web'in gücünden herkesin, yetenekleri veya kısıtlılıkları ne olursa olsun, eşit şekilde yararlanabilmesini sağlamak hedeflenmelidir. Bu, sadece WCAG gibi standartlara uymaktan öte, farklı kullanıcı ihtiyaçlarını anlayan ve onlara saygı duyan bir tasarım felsefesini benimsemektir. Erişilebilir bir web sitesi, sadece belirli bir gruba değil, tüm potansiyel kullanıcılara kapılarını açan, daha adil ve demokratik bir dijital alan yaratır.
+                </p>
+                 <p>
+                    Son olarak, algoritmik önyargıların ve teknolojinin kasıtsız sonuçlarının farkında olmalıyız. Geliştirdiğimiz sistemler, mevcut toplumsal eşitsizlikleri yansıtabilir veya pekiştirebilir. Bu nedenle, tasarım ve geliştirme süreçlerinde çeşitliliği gözetmek, farklı perspektifleri dahil etmek ve ürünlerimizin potansiyel olumsuz etkilerini proaktif olarak sorgulamak büyük önem taşır. Etik geliştirme, sürekli bir farkındalık, sorgulama ve iyileştirme çabasıdır.
+                </p>
+            </section>
+
+            <hr>
+
+            <section id="gelecek-vizyonu">
+                <h2>Ufuktaki Dönüşümler: Web'in Evrimi ve Sürekli Öğrenme Yolculuğu</h2>
+                <p>
+                    Web, sürekli hareket halinde olan, kendini yeniden icat eden dinamik bir ekosistemdir. Bugünün ileri teknolojisi, yarının standardı haline gelebilir. Dağıtık sistemlerden yapay zeka entegrasyonlarına, sürükleyici deneyimlerden anlamsal ağlara kadar uzanan yenilikler, web geliştirmenin sınırlarını ve olanaklarını durmaksızın genişletiyor. Bu sürekli akış, bir geliştirici için hem heyecan verici bir macera hem de daimi bir öğrenme gerekliliğidir.
+                </p>
+                <p>
+                    Bu evrimsel yolculukta ayakta kalmak ve değer yaratmaya devam etmek, teknik becerileri güncellemenin yanı sıra, temel prensiplere ve problem çözme yeteneğine sıkı sıkıya bağlı kalmayı gerektirir. Merak, adaptasyon yeteneği ve öğrenme isteği, bu alandaki en değerli varlıklardır. Web geliştirme, sadece belirli teknolojileri bilmek değil, aynı zamanda teknolojik değişimin altında yatan mantığı kavramak ve yeni araçları mevcut bilgi birikimiyle entegre edebilmektir.
+                </p>
+                <p>
+                    <strong>Abdulkadir Güngör</strong> olarak kişisel vizyonum, bu teknolojik evrimin sunduğu olanakları, insan odaklı, etik ve anlamlı dijital deneyimler yaratmak için kullanmaktır. Teknolojiyi, insanları birbirine bağlayan, bilgiye erişimi kolaylaştıran ve hayatı zenginleştiren bir araç olarak görüyorum. Bu vizyonun izlerini, <a href="https://abdulkadirgungor.com" target="_blank" rel="noopener noreferrer">kişisel web sitemde</a>, <a href="https://abdulkadirgungor86.github.io/" target="_blank" rel="noopener noreferrer">proje portföyümde</a>, <a href="https://abdulkadirgungor86.github.io/cv" target="_blank" rel="noopener noreferrer">özgeçmişimde</a> detaylandırdığım çalışmalarda, <a href="https://github.com/abdulkadirgungor86" target="_blank" rel="noopener noreferrer">yazılım projelerimde</a>, <a href="https://github.com/abdulkadir-gungor" target="_blank" rel="noopener noreferrer">güvenlik odaklı yaklaşımlarımda</a> ve <a href="https://www.linkedin.com/in/abdulkadir-güngör" target="_blank" rel="noopener noreferrer">profesyonel ağımda</a> bulabilirsiniz. Web'in geleceği ne yönde ilerlerse ilerlesin, yaratma, keşfetme ve daha iyiye ulaşma tutkusu, bu bitmeyen yolculukta en önemli rehber olmaya devam edecektir.
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer ve Script Bölümü Değiştirilmedi -->
+    <footer class="site-footer">
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="https://abdulkadirgungor.com" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör</a></li>
+                <li><a href="https://abdulkadirgungor86.github.io/" target="_blank" rel="noopener noreferrer">Kişisel Web Site</a></li>
+                <li><a href="https://abdulkadirgungor86.github.io/cv" target="_blank" rel="noopener noreferrer">Özgeçmiş CV</a></li>
+                <li><a href="https://github.com/abdulkadirgungor86" target="_blank" rel="noopener noreferrer">Github Yazılım</a></li>
+                <li><a href="https://github.com/abdulkadir-gungor" target="_blank" rel="noopener noreferrer">Github CyberSecurity</a></li>
+                <li><a href="https://www.linkedin.com/in/abdulkadir-güngör" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
+            </ul>
+            <p class="copyright">© <span id="current-year"></span> Abdulkadir Güngör. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Basit bir script: Copyright yılı otomatik olarak güncellenir.
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Klavye ile gezinme tespiti (Erişilebilirlik için)
+        function handleFirstTab(e) {
+            if (e.key === 'Tab') { // 'Tab' tuşuna ilk basıldığında
+                document.body.classList.add('user-is-tabbing');
+                window.removeEventListener('keydown', handleFirstTab);
+                window.addEventListener('mousedown', handleMouseDownOnce); // Fare tıklamasını dinle
+            }
+        }
+
+        function handleMouseDownOnce() {
+            document.body.classList.remove('user-is-tabbing');
+            window.removeEventListener('mousedown', handleMouseDownOnce);
+            window.addEventListener('keydown', handleFirstTab); // Tekrar Tab dinlemeye başla
+        }
+
+        window.addEventListener('keydown', handleFirstTab);
+
+        console.log("Abdulkadir Güngör - Web Design & Developer sayfası (üçüncü benzersiz içerik) başarıyla yüklendi.");
+        // Buraya daha fazla JavaScript kodu eklenebilir (örn. animasyonlar, interaktif öğeler vb.)
+    </script>
+
+</body>
+</html>
